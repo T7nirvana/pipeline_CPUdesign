@@ -18,7 +18,7 @@ module dm( addr, din, DMWr, clk, rst , dout );
    end
     else if (DMWr) 
    begin
-      dmem[addr] <= din;
+      dmem[addr] = din;
 	 `ifdef DEBUG
 	   $display("dmem[%4d]=%8X",addr,dmem[addr]);
 	 `endif
